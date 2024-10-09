@@ -1,0 +1,10 @@
+services:
+  devpi:
+    env_file: .env
+    container_name: devpi
+    build: .
+    volumes:
+      - ./data:/data
+    ports:
+      - 3141:3141
+    restart: always
